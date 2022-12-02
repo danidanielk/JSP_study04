@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body><!-- 
+		파일처리.
+		1. 파일이 업로드가 될 폴더 하나 필요. 웹앱폴더 안에 폴더하나 만든다.
+		2. 파일처리는 무조건 POST 방식으로 해야한다.(데이터 담는 GET 방식요청이 파일 소화못함)
+		3. 기존 시스템은 글자는 인코딩,디코딩 전송이 가능한데 지금 할 파일처리는 인코딩 못함. 다른방식으로 인코딩전송,디코딩받아오기 필요
+			이작업을 하려면 mvnrepository 구글검색 들어가서 cos 검색 맨위에거 최신버전으로 jar 파일 다운받음.
+			WEB-INF // lib 폴더안에 붙여넣기 
+			cos.jar 로 인코딩해서 전송,디코딩해서 받아오기
+
+ -->
+		<form action="Output" method="post" enctype="multipart/form-data">
+			제목 <input name="title"> <p>
+			사진 <input type = "file" name="photo"> <p>
+			기타 <input type = "file" name="etc"> <p>
+			<hr>
+			<button>확인</button>
+		</form>
+</body>
+</html>
